@@ -2,7 +2,8 @@
 
 /* mixins, variables, etc. */ 
 
-$grayMediumLight: #eaeaea; 
+$grayLight: #fff
+$grayMediumLight: #eee; 
 
 /* universal */
 
@@ -79,7 +80,8 @@ p{
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight; color: $grayLight;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
   a{
     color: $gray;
     &:hover {
