@@ -3,22 +3,11 @@ require 'spec_helper'
 describe "StaticPages" do
 
 	describe "Home page" do
+		before { visit root_path }
 
-		it "should have the h1 'Sample App'" do
-		  # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-		  visit root_path
-		  expect(page).to have_content('Sample App')
-		end
-
-		it "should have the base title" do
-			visit root_path
-			expect(page).to have_title("Ruby on Rails Tutorial Sample App")
-		end
-
-		it "should have a custom page title" do
-		  visit root_path
-		  expect(page).to have_title("| Home")
-		end
+		it { should have_content('Sample App') }
+		it { should have_title("Ruby on Rails Tutorial Sample App") }
+		it { should_not have_title('| Home') }
 	end
 
 	describe "Help page" do
