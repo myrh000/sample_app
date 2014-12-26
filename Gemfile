@@ -45,6 +45,9 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
+#Local doc for Guides and API
+gem 'redcarpet', '~> 2.1.1'
+
 # group :production do
 # 	gem 'pg', '0.15.1'
 # end
